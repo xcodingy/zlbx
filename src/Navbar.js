@@ -6,11 +6,11 @@ import './css/Navbar.css'
 class Navbar extends Component {
     render() {
         return (
-            <div class="nav">
+            <div className="nav">
                 <a id="logo" href="#">
                     <img alt="logo" src={logo} />
                 </a>
-                <ul class="menu">
+                <ul className="menu">
                     <li><a href="">回到主页</a></li>
                     <li><a href="">资料下载</a></li>
                     <li><a href="">联系我们</a></li>

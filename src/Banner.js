@@ -6,9 +6,10 @@ import './css/Banner.css';
 class Banner extends Component {
     render() {
         return(
-          <div class="container">
-
-          </div>
+            <div className="container">
+                <img alt="banner" src={banner} />
+                <div className=""></div>
+            </div>
         );
     }
 }
