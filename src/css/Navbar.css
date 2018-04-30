@@ -23,12 +23,14 @@
 .menu>li>a {
     display: block;
     text-decoration: none;
-    font-family: "微软雅黑", Microsoft YaHei UI, Microsoft YaHei UI Light,"宋体","sans-serif";
+    font-family: Microsoft YaHei UI Light, Microsoft YaHei UI, "宋体", "sans-serif";
     color: #4B4B4B;
     font-size: 16px;
     line-height: 22px;
     height: 22px;
     padding: 39px 20px;
+    transition-property: background-color,color;
+    transition-duration: 200ms;
 }
 
 .menu>li>a:hover {

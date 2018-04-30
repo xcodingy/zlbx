@@ -16,9 +16,9 @@ div.left {
     z-index: 6;
     height: 260px;
     width: 260px;
-    border: solid 1px black;
+    /*border: solid 1px black;*/
     top: 85px;
-    left: 150px;
+    left: 180px;
 }
 
 div.right {
@@ -27,32 +27,60 @@ div.right {
     z-index: 6;
     height: 260px;
     width: 260px;
-    border: solid 1px black;
+    /*border: solid 1px black;*/
     top: 85px;
-    right: 150px;
+    right: 180px;
+}
+
+.right>img, .left>img {
+    position: absolute;
+    width: 130px;
 }
 
 .left>img {
-    position: absolute;
-    top: 20px;
-    left: 80px;
-    height: 100px;
+    top: 30px;
+    left: 75px;
 }
 
 .right>img {
-    position: absolute;
-    height: 100px;
-    top: 20px;
-    right: 80px;
+    bottom: 30px;
+    right: 75px;
 }
 
 .button {
     position: absolute;
-    bottom: 20px;
+    width: 150px;
+    height: 60px;
+}
+
+.button>a {
+    display: block;
+    font-family: Microsoft YaHei UI Light, Microsoft YaHei UI, "宋体", "sans-serif";
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 19px 0px 23px 0px;
+    text-align: center;
+    text-decoration: none;
     border: solid 1px #ffffff;
-    border-radius: 4px;
-    width: 100px;
-    height: 40px;
-    line-height: 20px;
-    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 200ms;
+}
+
+.left>div[class=button] {
+    left: 65px;
+    bottom: 30px;
+}
+
+.right>div[class=button] {
+    right: 65px;
+    top: 30px;
+}
+
+.left>div[class=button]>a:hover {
+    background-color: #82bcd6;
+}
+
+.right>div[class=button]>a:hover {
+    background-color: #64d268;
 }
