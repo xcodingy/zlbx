@@ -11,7 +11,7 @@
 .menu {
     float: right;
     height: 100%;
-    margin-right: 105px;
+    margin-right: 80px;
 }
 
 .menu>li {
@@ -28,7 +28,7 @@
     font-size: 16px;
     line-height: 22px;
     height: 22px;
-    padding: 39px 15px;
+    padding: 39px 20px;
 }
 
 .menu>li>a:hover {
@@ -47,7 +47,7 @@
     display: block;
     float: left;
     padding-top: 20px;
-    margin-left: 130px;
+    margin-left: 110px;
 }
 
 #logo>img {

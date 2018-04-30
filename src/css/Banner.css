@@ -9,3 +9,50 @@
 .container>img {
     width: 100%;
 }
+
+div.left {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    height: 260px;
+    width: 260px;
+    border: solid 1px black;
+    top: 85px;
+    left: 150px;
+}
+
+div.right {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    height: 260px;
+    width: 260px;
+    border: solid 1px black;
+    top: 85px;
+    right: 150px;
+}
+
+.left>img {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    height: 100px;
+}
+
+.right>img {
+    position: absolute;
+    height: 100px;
+    top: 20px;
+    right: 80px;
+}
+
+.button {
+    position: absolute;
+    bottom: 20px;
+    border: solid 1px #ffffff;
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 16px;
+}

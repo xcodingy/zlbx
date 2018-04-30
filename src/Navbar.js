@@ -14,7 +14,8 @@ class Navbar extends Component {
                     <li><a href="">回到主页</a></li>
                     <li><a href="">资料下载</a></li>
                     <li><a href="">联系我们</a></li>
-                    <li><a href="">注册/登录</a></li>
+                    <li><a href="">注册</a></li>
+                    <li><a href="">登录</a></li>
                 </ul>
             </div>
         );
