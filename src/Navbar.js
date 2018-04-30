@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './res/logofull.png';
 import './css/Navbar.css'
 
+
 class Navbar extends Component {
     render() {
         return (
@@ -9,7 +10,7 @@ class Navbar extends Component {
                 <a id="logo" href="#">
                     <img alt="logo" src={logo} />
                 </a>
-                <ul>
+                <ul class="menu">
                     <li><a href="">回到主页</a></li>
                     <li><a href="">资料下载</a></li>
                     <li><a href="">联系我们</a></li>
@@ -19,5 +20,6 @@ class Navbar extends Component {
         );
     }
 }
+
 
 export default Navbar;
