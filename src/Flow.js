@@ -5,7 +5,7 @@ import hexborder from './res/hexborder.png';
 import delimiter from './res/delimiter.png';
 // import connector from './res/connector.png';
 
-var hex_div =
+var hex_div = {};
 
 class Flow extends Component {
     render() {
