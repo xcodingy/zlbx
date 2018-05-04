@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Navbar';
 import Banner from './Banner';
+import Flow from './Flow';
 
 class App extends Component {
     render() {
@@ -9,6 +10,7 @@ class App extends Component {
             <div>
                 <Navbar />
                 <Banner />
+                <Flow />
                 {/*<div className="App">*/}
                     {/*<div className="App-header">*/}
                         {/*<img src={logo} className="App-logo" alt="logo" />*/}

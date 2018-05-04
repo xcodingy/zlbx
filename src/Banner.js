@@ -9,7 +9,7 @@ import wechat from './res/wechat.png';
 class Banner extends Component {
     render() {
         return(
-            <div className="container">
+            <div className="banner-container container">
                 <img alt="banner" src={banner} />
                 <div className="left">
                     <img alt="left" src={computer} />

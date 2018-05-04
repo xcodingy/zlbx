@@ -1,12 +1,9 @@
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1300px;
+.banner-container {
     position: relative;
     z-index: 5;
 }
 
-.container>img {
+.banner-container>img {
     width: 100%;
 }
 
@@ -55,7 +52,6 @@ div.right {
 
 .button>a {
     display: block;
-    font-family: Microsoft YaHei UI Light, Microsoft YaHei UI, "宋体", "sans-serif";
     color: #ffffff;
     font-size: 18px;
     line-height: 18px;
