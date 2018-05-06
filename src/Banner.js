@@ -6,6 +6,7 @@ import computer from './res/computer.png';
 import wechat from './res/wechat.png';
 
 
+// Banner class
 class Banner extends Component {
     render() {
         return(
@@ -27,6 +28,5 @@ class Banner extends Component {
         );
     }
 }
-
 
 export default Banner;

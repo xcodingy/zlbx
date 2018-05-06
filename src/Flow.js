@@ -11,23 +11,19 @@ import arrow from './res/arrow.png';
 import arrow_l from './res/arrow_l.png';
 
 
+// Arrow animation class
 class ArrowDiv extends Component {
-    constructor(args) {
-        super(args);
-    }
-
     componentDidMount() {
-        // console.log(this.refs['arrow_1'].getAttribute('src'));
-        this.timerID = setInterval(
-            () => this.updateArrow(), 200
+        this.timerID = setInterval(              // set up arrow animation trigger
+            () => this.updateArrow(), 230
         );
     }
 
     componentWillUnmount() {
-        clearInterval(this.timerID);
+        clearInterval(this.timerID);            //unset arrow animation trigger
     }
 
-    updateArrow() {
+    updateArrow() {         // define arrow animation
         let a = this.refs['arrow_1'].getAttribute('src');
         let b = this.refs['arrow_2'].getAttribute('src');
         let c = this.refs['arrow_3'].getAttribute('src');
@@ -49,11 +45,13 @@ class ArrowDiv extends Component {
 }
 
 
+// Hex show board class
 class HexDiv extends Component {
     constructor(args) {
         super(args);
-
         let img_src = hexborder;
+
+        // set up different image for the last hex board
         if(this.props.flow === '1') {
             img_src = bluehex;
         }
@@ -63,7 +61,7 @@ class HexDiv extends Component {
         }
 
         this.state = {
-            div_class: 'hex_div ' + this.props.name,
+            div_class: 'hex_div ' + this.props.name,            // set up class state
             src: img_src
         };
     }
@@ -82,8 +80,9 @@ class HexDiv extends Component {
 }
 
 
+// Work flow container class
 class Flow extends Component {
-    line1_texts = ['扫码', '在线', '填写', '支付', '完成']
+    line1_texts = ['扫码', '在线', '填写', '支付', '完成']        // board text list
     line2_texts = ['关注', '投保', '保单', '保费', '投保']
 
     render() {

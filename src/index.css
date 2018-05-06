@@ -1,15 +1,20 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-family: Microsoft YaHei UI Light, Microsoft YaHei UI, "宋体", "sans-serif";
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei UI Light, Microsoft YaHei UI, "宋体", "sans-serif";
+}
+
+body {
+    text-align: center;
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    background-color: #FCFCFC;
 }
 
 .container>img {
-  display: block;
+    display: block;
 }
