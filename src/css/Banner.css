@@ -58,6 +58,7 @@ div.right {
     padding: 19px 0px 23px 0px;
     text-align: center;
     text-decoration: none;
+    /*letter-spacing: 8px;*/
     border: solid 1px #ffffff;
     border-radius: 10px;
     transition: background-color 200ms;

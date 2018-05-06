@@ -1,0 +1,68 @@
+.hex_div {
+    float: left;
+    animation-timing-function: ease-in-out;
+}
+
+.hex_div>img {
+    clear: both;
+    position: relative;
+    display: block;
+    width: 120px;
+    margin-top: 40px;
+}
+
+.hex_div_1, .hex_div_2, .hex_div_3 {
+    /*margin-left: 20px;*/
+}
+
+.hex_text {
+    float: left;
+    position: relative;
+    z-index: 7;
+}
+
+.hex_text>span {
+    font-family: Microsoft YaHei UI, "宋体", "sans-serif";
+}
+
+.line_1, .line_2 {
+    display: inline;
+    position: relative;
+    z-index: 7;
+    letter-spacing: 4px;
+    color: #4B4B4B;
+    font-size: 17px;
+    /*font-weight: bold;*/
+}
+
+.line_1 {
+    top: 74px;
+    left: 41px;
+}
+
+.line_2 {
+    top: 103px;
+    left: -1px;
+}
+
+
+@keyframes hex_rotate {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+
+.hex_div:hover {
+    animation: hex_rotate 400ms;
+}
+
+.hex_div_0 span {
+    color: #00A9E5;
+}
+
+.hex_div_3 span {
+    color: #ffffff;
+}
+
+.hex_div_1 span[class=line_2], .hex_div_2 span[class=line_2] {
+    color: #00A9E5;
+}

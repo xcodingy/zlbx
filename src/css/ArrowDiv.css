@@ -1,0 +1,15 @@
+.connector {
+    float: left;
+    margin-top: 83px;
+    margin-left: 19px;
+    margin-right: 19px;
+}
+
+.connector>img {
+    height: 34px;
+    vertical-align: bottom;
+}
+
+.arrow_2, .arrow_3 {
+    margin-left: -8px;
+}
