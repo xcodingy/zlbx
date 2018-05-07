@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
-import './css/Flow.css';
-import './css/ArrowDiv.css';
-import './css/HexDiv.css';
+import '../css/Flow.css';
+import '../css/ArrowDiv.css';
+import '../css/HexDiv.css';
 
-import hexborder from './res/hexborder.png';
-import greenhex from './res/greenhex.png';
-import bluehex from './res/bluehex.png';
-import delimiter from './res/delimiter.png';
-import arrow from './res/arrow.png';
-import arrow_l from './res/arrow_l.png';
+import hexborder from '../res/hexborder.png';
+import greenhex from '../res/greenhex.png';
+import bluehex from '../res/bluehex.png';
+import delimiter from '../res/delimiter.png';
+import arrow from '../res/arrow.png';
+import arrow_l from '../res/arrow_l.png';
 
 
 // Arrow animation class

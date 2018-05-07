@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
+
 import logo from './res/logofull.png';
 import './css/Navbar.css'
 
@@ -32,15 +34,15 @@ class Navbar extends Component {
     render() {
         return (
             <div className='nav container' ref='nav' style={{left: this.state.left}}>       {/* bind style left to state left */}
-                <a id='logo' href='#'>
+                <Link id='logo' to='/'>
                     <img alt='logo' src={logo} />
-                </a>
+                </Link>
                 <ul className='menu'>
-                    <li><a href='#'>回到主页</a></li>
-                    <li><a href='#'>资料下载</a></li>
-                    <li><a href='#'>联系我们</a></li>
-                    <li><a href='#'>注册</a></li>
-                    <li><a href='#'>登录</a></li>
+                    <li><Link to='/'>回到主页</Link></li>
+                    <li><Link to='/downloads'>资料下载</Link></li>
+                    <li><Link to='/contact'>联系我们</Link></li>
+                    <li><Link to='/signup'>注册</Link></li>
+                    <li><Link to='#'>登录</Link></li>
                 </ul>
             </div>
         );
