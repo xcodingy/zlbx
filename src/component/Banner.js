@@ -40,16 +40,6 @@ class Banner extends Component {
     render() {
         return(
             <div className='banner-container container' id='banner'>
-                <ReactModal
-                    isOpen={this.state.showLogModal}
-                    contentLabel="Minimal Modal Example"
-                    ariaHideApp={false}
-                    parentSelector={this.getParent}
-                    className='modal'
-                    overlayClassName='overlay'
-                >
-                    <button onClick={this.handleCloseLogModal}>Close Modal</button>
-                </ReactModal>
                 <img alt='banner' src={banner} />
                 <div className='left'>
                     <img alt='left' src={computer} />
