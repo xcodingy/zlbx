@@ -25,12 +25,12 @@
     /*border: solid 1px black;*/
 }
 
-.flow_1 {
+.flow-1 {
     position: relative;
     margin-top: 100px;
 }
 
-.flow_title {
+.flow-title {
     font-size: 24px;
     color: #4B4B4B;
     text-align: center;

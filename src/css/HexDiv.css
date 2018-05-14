@@ -1,9 +1,9 @@
-.hex_div {
+.hex-div {
     float: left;
     animation-timing-function: ease-in-out;
 }
 
-.hex_div>img {
+.hex-div>img {
     clear: both;
     position: relative;
     display: block;
@@ -11,21 +11,21 @@
     margin-top: 40px;
 }
 
-.hex_div_1, .hex_div_2, .hex_div_3 {
+.hex-div-1, .hex-div-2, .hex-div-3 {
     /*margin-left: 20px;*/
 }
 
-.hex_text {
+.hex-text {
     float: left;
     position: relative;
     z-index: 7;
 }
 
-.hex_text>span {
+.hex-text>span {
     font-family: Microsoft YaHei UI, "宋体", "sans-serif";
 }
 
-.line_1, .line_2 {
+.line-1, .line-2 {
     display: inline;
     position: relative;
     z-index: 7;
@@ -35,34 +35,34 @@
     /*font-weight: bold;*/
 }
 
-.line_1 {
+.line-1 {
     top: 74px;
     left: 41px;
 }
 
-.line_2 {
+.line-2 {
     top: 103px;
     left: -1px;
 }
 
 
-@keyframes hex_rotate {
+@keyframes hex-rotate {
     from {transform: rotateY(0deg);}
     to {transform: rotateY(360deg);}
 }
 
-.hex_div:hover {
-    animation: hex_rotate 400ms;
+.hex-div:hover {
+    animation: hex-rotate 400ms;
 }
 
-.hex_div_0 span {
+.hex-div-0 span {
     color: #00A9E5;
 }
 
-.hex_div_3 span {
+.hex-div-3 span {
     color: #ffffff;
 }
 
-.hex_div_1 span[class=line_2], .hex_div_2 span[class=line_2] {
+.hex-div-1 span[class=line-2], .hex-div-2 span[class=line-2] {
     color: #00A9E5;
 }

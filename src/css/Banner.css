@@ -62,7 +62,7 @@ div.right {
     border: solid 1px #ffffff;
     border-radius: 10px;
     transition: background-color 200ms;
-    cursor: grab;
+    cursor: pointer;
 }
 
 .left>div[class=button] {

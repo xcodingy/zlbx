@@ -5,11 +5,22 @@
     margin-right: 19px;
 }
 
-.connector>img {
+.connector img {
     height: 34px;
     vertical-align: bottom;
 }
 
-.arrow_2, .arrow_3 {
+.arrow-2, .arrow-3 {
     margin-left: -8px;
+}
+
+.arrow {
+    position: relative;
+    z-index: 7;
+}
+
+.arrow-l {
+    position: relative;
+    bottom: 34px;
+    z-index: 6;
 }
