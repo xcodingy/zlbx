@@ -21,6 +21,8 @@ class Banner extends Component {
         this.handleCloseLogModal = this.handleCloseLogModal.bind(this);
         this.addBlur = this.addBlur.bind(this);
         this.removeBlur = this.removeBlur.bind(this);
+        this.blur = 10;
+        this.blurInterval = 30;
     }
 
     handleOpenLogModal() {
@@ -48,15 +50,15 @@ class Banner extends Component {
                 banner_obj.style.filter = 'blur(' + val + 'px)';
                 val ++;
 
-                if (val === 10) {
+                if (val === this.blur) {
                     clearInterval(blurID);
                 }
-            }, 50
+            }, this.blurInterval
         );
     }
 
     removeBlur() {
-        let val = 10;
+        let val = this.blur;
         let banner_obj = this.refs['banner'];
 
         let blurID = setInterval(
@@ -67,7 +69,7 @@ class Banner extends Component {
                 if (val === 0) {
                     clearInterval(blurID);
                 }
-            }, 50
+            }, this.blurInterval
         );
     }
 
