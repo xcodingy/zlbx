@@ -27,7 +27,6 @@ class Banner extends Component {
         this.setState({
             showLogModal: 'block'
         });
-        console.log(this.state);
 
         this.addBlur();
     }
