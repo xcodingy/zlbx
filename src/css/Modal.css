@@ -1,0 +1,15 @@
+.modal {
+    position: relative;
+    z-index: 6;
+    width: 1300px;
+    height: 0px;
+}
+
+.modal-background {
+    position: relative;
+    width: 1300px;
+    height: 432px;
+    background-color: black;
+    opacity: 0.6;
+    /*filter: blur(10px);*/
+}

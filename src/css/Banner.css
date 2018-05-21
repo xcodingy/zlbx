@@ -83,17 +83,9 @@ div.right {
     background-color: #64d268;
 }
 
-.overlay {
-    z-index: 8;
-    position: fixed;
-    height: 432px;
-    width: 1300px;
-    top: 100px;
-    background:rgba(20,20,20,0.7);
-}
-
-.modal {
-    /*background-color: white;*/
-    /*height: 100px;*/
-    /*background:hsla(0,0%,100%,.3);*/
+.blur {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
 }

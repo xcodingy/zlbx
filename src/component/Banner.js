@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import ReactModal from 'react-modal';
+import Modal from './Modal';
 
 import '../css/Banner.css';
 import banner from '../res/banner.png';
@@ -14,23 +14,62 @@ class Banner extends Component {
         super(args);
 
         this.state = {
-            showLogModal: false
+            showLogModal: 'none'
         }
 
         this.handleOpenLogModal = this.handleOpenLogModal.bind(this);
         this.handleCloseLogModal = this.handleCloseLogModal.bind(this);
+        this.addBlur = this.addBlur.bind(this);
+        this.removeBlur = this.removeBlur.bind(this);
     }
 
     handleOpenLogModal() {
         this.setState({
-            showLogModal: true
+            showLogModal: 'block'
         });
+        console.log(this.state);
+
+        this.addBlur();
     }
 
     handleCloseLogModal() {
         this.setState({
-            showLogModal: false
+            showLogModal: 'none'
         });
+
+        this.removeBlur();
+    }
+
+    addBlur() {
+        let val = 0;
+        let banner_obj = this.refs['banner'];
+
+        let blurID = setInterval(
+            () => {
+                banner_obj.style.filter = 'blur(' + val + 'px)';
+                val ++;
+
+                if (val === 10) {
+                    clearInterval(blurID);
+                }
+            }, 50
+        );
+    }
+
+    removeBlur() {
+        let val = 10;
+        let banner_obj = this.refs['banner'];
+
+        let blurID = setInterval(
+            () => {
+                banner_obj.style.filter = 'blur(' + val + 'px)';
+                val ++;
+
+                if (val === 0) {
+                    clearInterval(blurID);
+                }
+            }, 50
+        );
     }
 
     getParent() {
@@ -39,19 +78,22 @@ class Banner extends Component {
 
     render() {
         return(
-            <div className='banner-container container' id='banner'>
-                <img alt='banner' src={banner} />
-                <div className='left'>
-                    <img alt='left' src={computer} />
-                    <div className='button'>
-                        <Link to='registration'><span>在 线 投 保</span></Link>
+            <div>
+                <Modal show={this.state.showLogModal} ref='modal' />
+                <div className='banner-container container' id='banner' ref='banner'>
+                    <img alt='banner' src={banner} />
+                    <div className='left'>
+                        <img alt='left' src={computer} />
+                        <div className='button'>
+                            <Link to='registration'><span>在 线 投 保</span></Link>
+                        </div>
                     </div>
-                </div>
-                <div className='right'>
-                    <div className='button'  onClick={this.handleOpenLogModal}>
-                        <div><span>微 信 投 保</span></div>
+                    <div className='right'>
+                        <div className='button'  onClick={this.handleOpenLogModal}>
+                            <div><span>微 信 投 保</span></div>
+                        </div>
+                        <img alt='right' src={wechat} />
                     </div>
-                    <img alt='right' src={wechat} />
                 </div>
             </div>
         );
