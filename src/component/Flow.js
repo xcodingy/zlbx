@@ -71,7 +71,7 @@ class ArrowDiv extends Component {
 
         let fadeID = setInterval(
             () => {
-                num += 1;
+                num ++;
                 arrow.style.opacity = num/10;
 
                 if (num === 10) {
@@ -86,7 +86,7 @@ class ArrowDiv extends Component {
 
         let fadeID = setInterval(
             () => {
-                num -= 1;
+                num --;
                 arrow.style.opacity = num/10;
 
                 if (num === 0) {

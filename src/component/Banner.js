@@ -22,12 +22,12 @@ class Banner extends Component {
         this.addBlur = this.addBlur.bind(this);
         this.removeBlur = this.removeBlur.bind(this);
         this.blur = 10;
-        this.blurInterval = 30;
+        this.blurInterval = 20;
     }
 
     handleOpenLogModal() {
         this.setState({
-            showLogModal: 'block'
+            showLogModal: true
         });
 
         this.addBlur();
@@ -35,7 +35,7 @@ class Banner extends Component {
 
     handleCloseLogModal() {
         this.setState({
-            showLogModal: 'none'
+            showLogModal: false
         });
 
         this.removeBlur();
@@ -48,11 +48,12 @@ class Banner extends Component {
         let blurID = setInterval(
             () => {
                 banner_obj.style.filter = 'blur(' + val + 'px)';
-                val ++;
 
                 if (val === this.blur) {
                     clearInterval(blurID);
                 }
+
+                val ++;
             }, this.blurInterval
         );
     }
@@ -64,23 +65,20 @@ class Banner extends Component {
         let blurID = setInterval(
             () => {
                 banner_obj.style.filter = 'blur(' + val + 'px)';
-                val ++;
 
                 if (val === 0) {
                     clearInterval(blurID);
                 }
+
+                val --;
             }, this.blurInterval
         );
-    }
-
-    getParent() {
-        return document.getElementById('banner');
     }
 
     render() {
         return(
             <div>
-                <Modal show={this.state.showLogModal} ref='modal' />
+                <Modal show={this.state.showLogModal} onModal={this.handleCloseLogModal} ref='modal' />
                 <div className='banner-container container' id='banner' ref='banner'>
                     <img alt='banner' src={banner} />
                     <div className='left'>
@@ -90,7 +88,7 @@ class Banner extends Component {
                         </div>
                     </div>
                     <div className='right'>
-                        <div className='button'  onClick={this.handleOpenLogModal}>
+                        <div className='button' onClick={this.handleOpenLogModal}>
                             <div><span>微 信 投 保</span></div>
                         </div>
                         <img alt='right' src={wechat} />

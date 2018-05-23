@@ -82,10 +82,3 @@ div.right {
 .right>div[class=button]>div:hover {
     background-color: #64d268;
 }
-
-.blur {
-    -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(10px);
-}
