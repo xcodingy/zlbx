@@ -20,7 +20,8 @@
 
 .flow {
     display: inline-block;
-    width: 840px;
+    vertical-align: bottom;
+    width: 1300px;
     height: 193px;
     /*border: solid 1px black;*/
 }

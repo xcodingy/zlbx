@@ -10,8 +10,14 @@ class Navbar extends Component {
     constructor(args) {         // constructor to initial states
         super(args);
 
+        let offset = (document.body.clientWidth - 1300) / 2;
+
+        if (offset < 0) {
+            offset = 0;
+        }
+
         this.state = {
-            left: (document.body.clientWidth - 1300) / 2 + 'px'         // set initial state of style 'left'
+            left: offset + 'px'         // set initial state of style 'left'
         }
 
         this.updateNav = this.updateNav.bind(this);     // bind function so it can work in call back
@@ -26,8 +32,14 @@ class Navbar extends Component {
     }
 
     updateNav() {
+        let offset = (document.body.clientWidth - 1300) / 2;
+
+        if (offset < 0) {
+            offset = 0;
+        }
+
         this.setState({
-            left: (document.body.clientWidth - 1300) / 2 + 'px'     // update state 'left'
+            left: offset + 'px'     // update state 'left'
         });
     }
 
@@ -42,7 +54,7 @@ class Navbar extends Component {
                     <li><Link to='/downloads'>资料下载</Link></li>
                     <li><Link to='/contact'>联系我们</Link></li>
                     <li><Link to='/signup'>注册</Link></li>
-                    <li><Link to='#'>登录</Link></li>
+                    <li><Link to='/'>登录</Link></li>
                 </ul>
             </div>
         );

@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import '../css/Modal.css';
 
+import cross from '../res/cross.png';
+
 
 class Modal extends Component {
     constructor(args) {
         super(args);
 
-        this.fadeInterval = 10;
+        this.fadeInterval = 5;
 
         this.modalFadeIn = this.modalFadeIn.bind(this);
         this.modalFadeOut = this.modalFadeOut.bind(this);
@@ -14,21 +16,26 @@ class Modal extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.onModal);
         let modalObj = this.refs['modal'];
 
         modalObj.style.display = 'none';
     }
 
     componentWillUpdate(nextProps, nextState) {
-        let modalObj = this.refs['modal']
+        let modalObj = this.refs['modal'];
 
-        if (nextProps.show) {
+        if (nextProps.show === true) {
             this.modalFadeIn(modalObj);
         }
-        else if (!nextProps.show) {
+        else if (nextProps.show === false) {
             this.modalFadeOut(modalObj);
         }
+    }
+
+    componentWillUnmount() {
+        let modalObj = this.refs['modal'];
+
+        modalObj.style.display = 'none';
     }
 
     modalFadeIn(modalObj) {
@@ -39,10 +46,10 @@ class Modal extends Component {
 
         let timerId = setInterval(
             () => {
-                modalObj.style.opacity = opacity / 10;
+                modalObj.style.opacity = opacity / 20;
                 opacity ++;
 
-                if (opacity === 10) {
+                if (opacity === 20) {
                     clearInterval(timerId);
                 }
             }, this.fadeInterval
@@ -50,11 +57,11 @@ class Modal extends Component {
     }
 
     modalFadeOut(modalObj) {
-        let opacity = 10;
+        let opacity = 20;
 
         let timerId = setInterval(
             () => {
-                modalObj.style.opacity = opacity / 10;
+                modalObj.style.opacity = opacity / 20;
                 opacity --;
 
                 if (opacity === 0) {
@@ -73,11 +80,9 @@ class Modal extends Component {
 
         return (
             <div className='modal' onClick={this.handleCloseLogModal} ref='modal'>
+                <div className='modal-background'></div>
                 <div className='modal-content'>
-
-                </div>
-                <div className='modal-background'>
-
+                    <img alt='cross' src={cross} id='cross' />
                 </div>
             </div>
         );

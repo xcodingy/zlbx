@@ -1,5 +1,6 @@
 .hex-div {
-    float: left;
+    display: inline-block;
+    /*float: left;*/
     animation-timing-function: ease-in-out;
 }
 

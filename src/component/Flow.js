@@ -8,7 +8,6 @@ import greenhex from '../res/greenhex.png';
 import bluehex from '../res/bluehex.png';
 import delimiter from '../res/delimiter.png';
 import arrow from '../res/arrow.png';
-import arrow_l from '../res/arrow_l.png';
 
 
 // Arrow animation class
@@ -16,86 +15,15 @@ class ArrowDiv extends Component {
     constructor(args) {
         super(args);
 
-        this.fadeInterval = 20;
-        this.stopInterval = 300;
-        this.fstInterval = this.fadeInterval * 10 + this.stopInterval;
-        this.secInterval = this.fstInterval + this.fadeInterval * 10 + this.stopInterval;
-        this.trdInterval = this.secInterval + this.fadeInterval * 10 + this.stopInterval;
     }
 
     componentDidMount() {
-        this.timerID = setInterval(              // set up arrow animation trigger
-            () => this.updateArrow(), 2300
-        );
+
     }
 
     componentWillUnmount() {
-        clearInterval(this.timerID);            //unset arrow animation trigger
+
     }
-
-    updateArrow() {         // define arrow animation
-        let a = this.refs['arrow_1'];
-        let b = this.refs['arrow_2'];
-        let c = this.refs['arrow_3'];
-
-        this.fadeArrowOut(a);
-        setTimeout(
-            () => this.fadeArrow(a, b), this.fstInterval
-        );
-        setTimeout(
-            () => this.fadeArrow(b, c), this.secInterval
-        );
-        setTimeout(
-            () => this.fadeArrowIn(c), this.trdInterval
-        );
-    }
-
-    fadeArrow(arrow_a, arrow_b) {
-        let num = 0;
-
-        let fadeID = setInterval(
-            () => {
-                num ++;
-                arrow_a.style.opacity = num/10;
-                arrow_b.style.opacity = (10 - num)/10;
-
-                if (num === 10) {
-                    clearInterval(fadeID);
-                }
-            }, this.fadeInterval
-        );
-    }
-
-    fadeArrowIn(arrow) {
-        let num = 0;
-
-        let fadeID = setInterval(
-            () => {
-                num ++;
-                arrow.style.opacity = num/10;
-
-                if (num === 10) {
-                    clearInterval(fadeID);
-                }
-            }, this.fadeInterval
-        )
-    }
-
-    fadeArrowOut(arrow) {
-        let num = 10;
-
-        let fadeID = setInterval(
-            () => {
-                num --;
-                arrow.style.opacity = num/10;
-
-                if (num === 0) {
-                    clearInterval(fadeID);
-                }
-            }, this.fadeInterval
-        )
-    }
-
 
     render() {
         return (
@@ -104,11 +32,6 @@ class ArrowDiv extends Component {
                     <img alt='arrow' className='arrow-1' src={arrow} ref='arrow_1' />
                     <img alt='arrow' className='arrow-2' src={arrow} ref='arrow_2' />
                     <img alt='arrow' className='arrow-3' src={arrow} ref='arrow_3' />
-                </div>
-                <div className='arrow-l'>
-                    <img alt='arrow' className='arrow-1' src={arrow_l} />
-                    <img alt='arrow' className='arrow-2' src={arrow_l} />
-                    <img alt='arrow' className='arrow-3' src={arrow_l} />
                 </div>
             </div>
         );

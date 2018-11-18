@@ -22,7 +22,7 @@ class Banner extends Component {
         this.addBlur = this.addBlur.bind(this);
         this.removeBlur = this.removeBlur.bind(this);
         this.blur = 10;
-        this.blurInterval = 20;
+        this.blurInterval = 10;
     }
 
     handleOpenLogModal() {
@@ -53,7 +53,7 @@ class Banner extends Component {
                     clearInterval(blurID);
                 }
 
-                val ++;
+                val += 2;
             }, this.blurInterval
         );
     }
@@ -70,14 +70,14 @@ class Banner extends Component {
                     clearInterval(blurID);
                 }
 
-                val --;
+                val -= 2;
             }, this.blurInterval
         );
     }
 
     render() {
         return(
-            <div>
+            <div id='banner-container'>
                 <Modal show={this.state.showLogModal} onModal={this.handleCloseLogModal} ref='modal' />
                 <div className='banner-container container' id='banner' ref='banner'>
                     <img alt='banner' src={banner} />

@@ -1,26 +1,41 @@
 .connector {
-    float: left;
-    margin-top: 83px;
+    /*float: left;*/
+    display: inline-block;
     margin-left: 19px;
     margin-right: 19px;
-}
-
-.connector img {
-    height: 34px;
-    vertical-align: bottom;
+    position: relative;
+    bottom: 47px;
 }
 
 .arrow-2, .arrow-3 {
     margin-left: -8px;
 }
 
-.arrow {
-    position: relative;
-    z-index: 7;
+.arrow .arrow-1 {
+    animation-delay: 0s;
 }
 
-.arrow-l {
-    position: relative;
-    bottom: 34px;
-    z-index: 6;
+.arrow .arrow-2 {
+    animation-delay: 0.65s;
+}
+
+.arrow .arrow-3 {
+    animation-delay: 1.3s;
+}
+
+.arrow>img {
+    display: inline-block;
+    height: 34px;
+    vertical-align: bottom;
+    animation: arrowAnimation 5s infinite linear;
+}
+
+@keyframes arrowAnimation {
+    0%, 38%, 62%, 100% {
+        opacity: 1;
+    }
+
+    46%, 54% {
+        opacity: 0.5;
+    }
 }
